@@ -1,9 +1,3 @@
-# Davin Wong - Inkling Challenge
-
-# Graph URLs:
-# http://ec2-50-19-203-254.compute-1.amazonaws.com/dashboard/http_codes
-# 
-
 # Resources:
 # Graphite's Example - https://github.com/graphite-project/graphite-web/blob/master/examples/example-client.py
 
