@@ -152,10 +152,10 @@ def get_new_data(line_count):
             print status_count['500']
 
             # save result in carbon_data. format: "<select graph> <current count> <time>"
-            carbon_data.append("system.inkling_%s %s %d" % (status_category, status_count[str(status_category)], timestamp))
+            carbon_data.append("system.http_response_graph_%s %s %d" % (status_category, status_count[str(status_category)], timestamp))
 
             if status_category2:
-                carbon_data.append("system.inkling_%s %s %d" % (status_category2, status_count[str(status_category2)], timestamp))
+                carbon_data.append("system.http_response_graph_%s %s %d" % (status_category2, status_count[str(status_category2)], timestamp))
 
     return carbon_data
 
