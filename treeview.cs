@@ -1,4 +1,4 @@
-﻿namespace Solarsoft.Utilities.EventViewerAdmin
+﻿namespace Utilities.EventViewerAdmin
 {
         #region opening file
 
@@ -145,7 +145,7 @@
             if (!File.Exists(workPath))
             {
                 MessageBox.Show("The file " + workPath + " cannot be opened.",
-                "Solarsoft Event Viewer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                "Event Viewer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
