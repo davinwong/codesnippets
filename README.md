@@ -1,5 +1,5 @@
-Code-Snippets
-=============
+codesnippets
+============
 
 
 ### Graphite Apache Log Parser (Employer Challenge)
