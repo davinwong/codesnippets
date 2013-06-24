@@ -2,13 +2,13 @@ Code-Snippets
 =============
 
 
-Graphite Apache Log Parser (Employer Challenge)
------------------------------------------------
+### Graphite Apache Log Parser (Employer Challenge)
+
 Graphs http status code counts (1xx, 2xx, 3xx, 4xx, 5xx) over time. Parses Apache .log file, sends data to carbon and graphs with Graphite.
 
 
-Movie Review Sentiment Analysis (Stanford NLP coursera.org)
------------------------------------------------------------
+### Movie Review Sentiment Analysis (Stanford NLP coursera.org)
+
 
 Classifies movie reviews as positive or negative with ~80% accuracy. Uses multinomial naive bayes classifer with bag of words assumption and Laplace smoothing.
 
