@@ -9,17 +9,17 @@ class node:
 
 
 def is_tree_subset(big_tree, small_tree):
+    if big_tree is None:
+        return False
     if big_tree.data == small_tree.data:
-        match_tree(big_tree, small_tree)
-        #return
-    else:
-        is_tree_subset(big_tree.left, small_tree)
-        is_tree_subset(big_tree.right, small_tree)
+        if match_tree(big_tree, small_tree):
+            return True
+
+    # return true if either left or right contains subset
+    return is_tree_subset(big_tree.left, small_tree) or is_tree_subset(big_tree.right, small_tree)
 
 
 def match_tree(big_tree, small_tree):
-    # if big_tree == None or small_tree == None:
-        # return
     if small_tree.data != big_tree.data:
         return False
     
@@ -35,7 +35,64 @@ def match_tree(big_tree, small_tree):
 
 def main():
 
-    tree1 = node(1,
+    big_tree1 = node(1,
+        node(2,
+            node(4,
+                node(8),
+                node(9)
+            ),
+            node(5,
+                node(10),
+                node(11)
+            )
+        ), 
+        node(3,
+            node(6),
+            node(7)
+        )
+    )
+
+    big_tree2 = node(0,
+        node(1,
+            node(2,
+                node(4,
+                    node(8),
+                    node(9)
+                ),
+                node(5,
+                    node(10),
+                    node(11)
+                )
+            ), 
+            node(3,
+                node(6),
+                node(7)
+            )
+        )
+    )
+
+    big_tree3 = node(0,
+        node(1,
+            node(2,
+                node(4,
+                    node(8),
+                    node(9)
+                ),
+                node(5,
+                    node(10),
+                    node(11)
+                )
+            ), 
+            node(3,
+                node(6),
+                node(2000)
+            )
+        )
+    )
+
+
+
+    small_tree = node(1,
         node(2,
             node(4),
             node(5)
@@ -46,17 +103,13 @@ def main():
         )
     )
 
-    tree2 = node(1,
-        node(2,
-            node(4),
-            node(5)
-        ), 
-        node(3,
-            node(6),
-            node(7)
-        )
-    )
+    # true because big just has extra nodes
+    print is_tree_subset(big_tree1, small_tree)
 
-    print match_tree(tree1, tree2)
+    # true because big just has extra root
+    print is_tree_subset(big_tree2, small_tree)
+
+    # false because 7 became 2000
+    print is_tree_subset(big_tree3, small_tree)
 
 main()
