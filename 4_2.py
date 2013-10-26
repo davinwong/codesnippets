@@ -1,13 +1,13 @@
 class graph:
     """
-    from stack overflow: "Note that while the user calls find_graph() with three arguments, it calls
-    itself with a fourth argument: the path that has already been traversed.
-    The default value for this argument is the empty list, '[]', meaning no
-    nodes have been traversed yet. This argument is used to avoid cycles
-    (the first 'if' inside the 'for' loop). The 'path' argument is not
-    modified: the assignment "path = path + [start]" creates a new list.
-    If we had written "path.append(start)" instead, we would have modified
-    the variable 'path' in the caller, with disastrous results."
+    from python docs: "Note that while the user calls find_graph() with
+    three arguments, it calls itself with a fourth argument: the path that
+    has already been traversed. The default value for this argument is the
+    empty list, '[]', meaning no nodes have been traversed yet. This argument
+    is used to avoid cycles (the first 'if' inside the 'for' loop). The 'path'
+    argument is not modified: the assignment "path = path + [start]" creates a
+    new list. If we had written "path.append(start)" instead, we would have
+    modified the variable 'path' in the caller, with disastrous results."
     """
     def __init__(self, graph):
         self.graph = graph
